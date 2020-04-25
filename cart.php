@@ -5,7 +5,7 @@ session_start();
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>0_0</title>
+    <title>101 barz sessie</title>
   </head>
   <body>
     <h1>Zeewater(1)</h1>
@@ -16,26 +16,12 @@ session_start();
     <input type='text' name='name' id='0123'>
     <input type='submit' name="Laurens" value='Submit'>
     </form>
-    <?php
-
-
-$Zeewater      = "Zeewater";
-$_SESSION["1"] = $Zeewater;
-
-$Zwembad       = "Zwembadwater";
-$_SESSION["2"] = $Zwembad;
-
-$Na            = "Natriumchloride";
-$_SESSION["3"] = $Na;
+<?php
 
 if (isset($_POST["Laurens"])) {
-    if ($_SESSION[$_POST["name"]]) {
-        echo "Gekozen item is " . $_SESSION[$_POST["name"]];
-    } else {
-        echo "Geen valide product gevonden";
-    }
+    $_SESSION["name"] = $_POST["name"];
 }
-
+echo "U heeft het product " . $_SESSION["name"] . " gekozen";
 ?>
  </body>
 </html>
